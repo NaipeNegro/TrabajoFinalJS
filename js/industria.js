@@ -44,8 +44,8 @@ var periodoIndustriaNuevo = '2021-09'
 
 //problema para recuperar datos de la industria
 
-if (localStorage.getItem('industria previa')) {
-    let industria = JSON.parse(localStorage.getItem('industria previa'));
+if (localStorage.getItem('industriaPrevia')) {
+    let industria = JSON.parse(localStorage.getItem('industriaPrevia'));
     
 
     // var cuitIndustriaRecuperada = parseInt(industria[0].cuit);
@@ -91,7 +91,7 @@ formularioIndustria.submit(function (evento) {
 
     industriaNueva.mostrarDatosIndustria('#formularios');
 
-    guardarIndustriaOTambo('industria previa', industriaNueva)
+    guardarIndustriaOTambo('industriaPrevia', industriaNueva)
 
     // var periodoIndustriaNuevo = periodoIndustriaNuevo
 

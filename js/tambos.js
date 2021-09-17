@@ -75,9 +75,9 @@ formularioTambo.submit(function (evento) {
 
     const tambo1 = new Tambo(cuitTamboNuevo, razonSocialTamboNuevo, numeroTamboInternoNuevo)
     
-        if (localStorage.getItem('industria previa')) {
+        if (localStorage.getItem('industriaPrevia')) {
 
-            let industria = JSON.parse(localStorage.getItem('industria previa'));
+            let industria = JSON.parse(localStorage.getItem('industriaPrevia'));
     
             const industriaRecuperada = new Industria(industria[0].cuit, industria[0].razonSocial);
             industriaRecuperada.precios(industria[0].periodo, industria[0].basicoKiloProteina, industria[0].basicoKilosGrasa);

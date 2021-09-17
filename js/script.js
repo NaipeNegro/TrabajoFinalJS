@@ -17,15 +17,4 @@ $(document).ready(function () {
     $('#formularioTambo').toggle(1000);
   });
 
-  // $('#btn-liquidar').click(() => {
-  //   $('#factura').show();
-  //   $('#factura').append($('#datosIndustria'));
-  //   $('#factura').append($('#tambos-tabla'));
-  //   $('#cuadroSistema').hide();
-  //   $('#cuadroInformacion').hide();
-  //   $('#datosTambos').hide();
-    
-  // });
-
-
 })

@@ -12,15 +12,22 @@ $.get(URL, function (respuesta, status) {
 
 $(document).ready(function () {
 
-  $('#btn-liquidar').click(() => {
-    $('#factura').show();
-    $('#factura').append($('#datosIndustria'));
-    $('#factura').append($('#tambos-tabla'));
-    $('#cuadroSistema').hide();
-    $('#cuadroInformacion').hide();
-    $('#datosTambos').hide();
-    
-  });
+    $('#btn-liquidar').click(() => {
 
+      if(localStorage.getItem('industriaPrevia') && localStorage.getItem('tambosAlStorage')){
+       
+          $('#factura').show();
+          $('#factura').append($('#datosIndustria'));
+          $('#factura').append($('#tambos-tabla'));
+          $('#cuadroSistema').hide();
+          $('#cuadroInformacion').hide();
+          $('#datosTambos').hide();
+          
+      }
+      else{
+        alert('Debe cargar datos de industria y tambo primero')
+      }
+      
+    });
 
 })
