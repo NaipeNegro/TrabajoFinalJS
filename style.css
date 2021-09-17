@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  box-sizing: content-box;
+}
+
+h1 {
+  margin-left: 2%;
+}
+
+header {
+  display: flex;
+  background-color: darkgray;
+  height: 50%;
+  padding: 1%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+section {
+  background-image: url("https://imagenes.elpais.com/resizer/njaGwNBF-IHeh8rPecqMyNn3cZg=/1960x0/cloudfront-eu-central-1.images.arcpublishing.com/prisa/BUGXCEEO3GBXKISVK2VRKEAOU4.jpg");
+  background-repeat: no-repeat;
+  background-size: cover center;
+  padding: 2%;
+  min-height: 100vh;
+}
+
+form {
+  border-style: solid;
+  /* display: block; */
+  border-color: black;
+  border-radius: 5%;
+  margin: 1%;
+  padding: 1%;
+  /* position: relative; */
+}
+
+.cuadro {
+  border-style: double;
+  border-color: darkblue;
+  border-radius: 5%;
+  display: none;
+  padding: 2%;
+  margin: 0% 2%;
+  background-color: lightgray;
+}
+
+#formularios {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#formularioIndustria {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+
+#formularioTambo {
+  display: flex;
+  flex-flow: column;
+}
+
+#datosIndustria {
+  border-style: solid;
+  border-color: black;
+  border-radius: 5%;
+  display: flex;
+  flex-flow: column;
+  margin: 1%;
+  padding: 1%;
+}
+
+#datosTambos {
+  display:none;
+  border-style: double;
+  border-color: darkblue;
+  background-color: lightgray;
+  margin: 2% 2%;
+  padding: 1%;
+}
+
+.texto {
+  margin-top: 1%;
+  text-align: justify;
+}
+
+button {
+  font-size: 1.5rem;
+}
+
+.boton {
+  font-size: 1.3rem;
+}
+
+input {
+  margin-bottom: 6%;
+}
+
+#botonesSistema {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+li {
+  display: inline-flex;
+}
+
+footer {
+  padding: 2%;
+  background-color: darkgray;
+  height: 5vh;
+}
+
+#factura {
+  padding: 1%;
+}
+
+#factura > * {
+  margin: 30px 0;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  background-color: black;
+  color: white;
+  border: 2px solid rgb(0, 0, 0);
+  text-align: center;
+  padding: 8px;
+}
+
+td {
+  border: 2px solid rgb(0, 0, 0);
+  text-align: center;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: white;
+}
+
+#cotizacionDolar{
+  text-align: right;
+  text-decoration: solid;
+}
+
+@media (max-width: 768px) {
+  button {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  th {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 515px) {
+  #formularios {
+    display: block;
+  }
+}
+
+@media (max-width: 425px) {
+  h1{
+    font-size: 1rem;
+  }
+  button {
+    font-size: 0.8rem;
+  }
+  #botonesSistema {
+    display: block;
+  }
+  th {
+    font-size: 0.2rem;
+  }
+}

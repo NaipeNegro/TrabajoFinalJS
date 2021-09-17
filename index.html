@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Liquidación Láctea</title>
+</head>
+<body>
+    <header>
+        <h1 id='titulo'>
+            Simulador de liquidación de leche
+        </h1>
+        <ul>
+            <li>
+                <button id="btn-informacion">Información</button>
+            </li>
+            <li>
+                <button id="btn-sistema">Sistema</button>
+            </li>
+        </ul>
+    </header>
+    <section>
+        <div id="cuadroInformacion" class="cuadro">
+            <h2>La liquidación de leche en la Argentina</h2>
+            <p class="texto">
+                La liquidación de la leche cruda de vaca se realiza 'al revés' que el resto de las liquidaciones. En ella el productor tambero le entrega la leche a la industria y es la industria quién le factura. El valor de la leche está dado por un precio básico y bonificaicones que dependen de la calidad, la composición y la higiene. Es la industria láctea quien manda a hacer los estudios a la leche que determinan la calidad y composición. Es por esta razón que muchos tamberos se quejan de que no saber cuanto van a recibir por su leche hasta que cobran. Por eso voy a programar un simulador que le permita al productor estimar el valor que va a recibir por la venta de su leche.</p>
+        </div>
+        <div id="cuadroSistema" class="cuadro">
+            <h2>Sistema</h2>
+            <div>
+            <ul id="botonesSistema">
+                <li>
+                    <button id="btn-industria">Formulario industria</button>
+                </li>
+                <li>
+                    <button id="btn-tambo">Formulario nuevo tambo</button>
+                </li>
+                <li>
+                    <button id="btn-liquidar">Liquidar</button>
+                </li>
+            </ul>
+        </div>
+        <div id="formularios">
+            <form id="formularioIndustria">
+                <h3>Datos de la industria</h3>
+                <div>
+                    <p>CUIT:</p>
+                    <input id="inpuTCuitIndustria" type="number">
+
+                    <p>Razón Social:</p>
+                    <input id="inputRazonSocialIndustria" type="text">
+        
+                    <p>Periodo:</p>
+                    <input id="inputPeriodoIndustria" type="month">
+        
+                    <p>Precio básico por kilo de proteína:</p>
+                    <input id="inputBasicoKiloProteina" type="number">
+        
+                    <p>Precio básico por kilo de grasa Butirosa:</p>
+                    <input id="inputBasicoKilosGrasa" type="number">
+                </div>
+        
+                <input class="boton" type="submit" value="Crear"/>
+            </form>
+            <form id="formularioTambo">
+                <h3>Agregar tambo</h3>
+                <div>
+                    <p>CUIT:</p>
+                    <input id="inputCuitTambo" type="number">
+        
+                    <p>Razón Social:</p>
+                    <input id="inputRazonSocialTambo" type="text">
+
+                    <p>Número de Tambo interno:</p>
+                    <input id="inputNumeroTamboInterno" type="number">
+
+                    <!-- <p>Periodo:</p>
+                    <input id="inputPeriodoTambo" type="month"> -->
+                
+                    <p>Litros:</p>
+                    <input id="inputLitros" type="number">
+        
+                    <p>Kilos Proteína:</p>
+                    <input id="inputKiloProteina" type="number">
+        
+                    <p>Kilos Grasa Butirosa:</p>
+                    <input id="inputKiloGrasa" type="number">
+        
+        
+                    <p>Unidades Formadoras de Colonias:</p>
+                    <input id="inputUfc" type="number">
+        
+        
+                    <p>Recuento de Células Somáticas:</p>
+                    <input id="inputRcs" type="number">
+                </div>
+        
+                <input class="boton" type="submit" value="Agregar tambo"/>
+            </form>
+        </div>
+        </div>
+
+        <div>
+            <div id="datosTambos">
+        </div>
+        
+        <div id="factura" class="cuadro">
+            <header>
+                <h2>Factura</h2>
+                <div id="cotizacionDolar"></div>
+
+            </header>
+    
+        </div>
+    </section>
+    <footer>
+        <p>
+            Todos los derechos reservados.
+        </p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/industria.js"></script>
+    <script src="./js/tambos.js"></script>
+    <script src="./js/liquidar.js"></script>
+</body>
+</html>
