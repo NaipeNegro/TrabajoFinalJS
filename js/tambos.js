@@ -37,13 +37,6 @@ function guardarIndustriaOTambo(nombreLocal, nuevaIndustriaOTambo) {
     localStorage.setItem(nombreLocal, JSON.stringify(tamboAGuardar));
 }
 
-// function recuperarIndustriaOTambo(nombreLocal, variable) {
-//     if (localStorage.getItem(nombreLocal)) {
-//         var variable = JSON.parse(localStorage.getItem(nombreLocal));
-//     }
-
-//     return variable
-// }
 
 // con "input" comienza lo que carga el usuario en el HTML, la variable termina en "Cargado" y los valores terminan en "Nuevo"
 
@@ -66,7 +59,6 @@ formularioTambo.submit(function (evento) {
     const cuitTamboNuevo = cuitTamboCargado.val();
     const razonSocialTamboNuevo = razonSocialTamboCargado.val();
     const numeroTamboInternoNuevo = numeroTamboInternoCargado.val();
-    const periodoTamboNuevo = periodoIndustriaNuevo;
     const litrosNuevo = litrosCargado.val();
     const kiloProteinaNuevo = kiloProteinaCargado.val();
     const kiloGrasaNuevo = kiloGrasaCargado.val();
@@ -81,7 +73,6 @@ formularioTambo.submit(function (evento) {
     
             const industriaRecuperada = new Industria(industria[0].cuit, industria[0].razonSocial);
             industriaRecuperada.precios(industria[0].periodo, industria[0].basicoKiloProteina, industria[0].basicoKilosGrasa);
-            // industriaRecuperada.mostrarDatosIndustria('#formularios');
         
             var periodoIndustriaNuevo = industria[0].periodo
     
@@ -101,8 +92,6 @@ formularioTambo.submit(function (evento) {
         crearFilaTambos(tambo1, '#tambos-tabla');
         console.log('existe la tabla')
 
-        // crearHeaderTabla(['CUIT', 'Razón Social', 'N interno', 'Período', 'Litros', 'Kilos Proteína', 'Kilos Grasa', 'ufc', 'rcs'], '#tambos-tabla');
-        // llenarTabla(tambo, '#tambos-tabla');
     }
     else {
         $('#datosTambos').show();
