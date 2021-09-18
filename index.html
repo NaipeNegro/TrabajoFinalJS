@@ -22,7 +22,7 @@
         </ul>
     </header>
     <section>
-        <div id="cuadroInformacion" class="cuadro">
+        <div id="cuadroInformacion">
             <h2>La liquidación de leche en la Argentina</h2>
             <p class="texto">
                 La liquidación de la leche cruda de vaca se realiza 'al revés' que el resto de las liquidaciones. En ella el productor tambero le entrega la leche a la industria y es la industria quién le factura. El valor de la leche está dado por un precio básico y bonificaicones que dependen de la calidad, la composición y la higiene. Es la industria láctea quien manda a hacer los estudios a la leche que determinan la calidad y composición. Es por esta razón que muchos tamberos se quejan de que no saber cuanto van a recibir por su leche hasta que cobran. Por eso voy a programar un simulador que le permita al productor estimar el valor que va a recibir por la venta de su leche.</p>
@@ -32,10 +32,16 @@
             <div>
             <ul id="botonesSistema">
                 <li>
-                    <button id="btn-industria">Formulario industria</button>
+                    <button id="btn-industria">Nueva industria</button>
                 </li>
                 <li>
-                    <button id="btn-tambo">Formulario nuevo tambo</button>
+                    <button id="btn-borrarIndustria">Borrar industria</button>
+                </li>
+                <li>
+                    <button id="btn-tambo">Crear tambo</button>
+                </li>
+                <li>
+                    <button id="btn-borrarTambos">Borrar tambos</button>
                 </li>
                 <li>
                     <button id="btn-liquidar">Liquidar</button>
@@ -109,6 +115,7 @@
         <div id="factura" class="cuadro">
             <header>
                 <h2>Factura</h2>
+                <button id="btn-limpiarFactura">Limpiar factura</button>
                 <div id="cotizacionDolar"></div>
 
             </header>

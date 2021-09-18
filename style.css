@@ -20,7 +20,9 @@ header {
 section {
   background-image: url("https://imagenes.elpais.com/resizer/njaGwNBF-IHeh8rPecqMyNn3cZg=/1960x0/cloudfront-eu-central-1.images.arcpublishing.com/prisa/BUGXCEEO3GBXKISVK2VRKEAOU4.jpg");
   background-repeat: no-repeat;
-  background-size: cover center;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   padding: 2%;
   min-height: 100vh;
 }
@@ -29,19 +31,27 @@ form {
   border-style: solid;
   /* display: block; */
   border-color: black;
-  border-radius: 5%;
   margin: 1%;
   padding: 1%;
   /* position: relative; */
 }
 
-.cuadro {
-  border-style: double;
-  border-color: darkblue;
-  border-radius: 5%;
+#cuadroInformacion {
   display: none;
   padding: 2%;
-  margin: 0% 2%;
+  background-color: white;
+}
+
+#cuadroSistema {
+  margin: 1% 20% 0% 20%;
+}
+
+.cuadro {
+  border-style: double;
+  border-color: black;
+  /* display: none; */
+  padding: 2%;
+  margin-top: 1%;
   background-color: lightgray;
 }
 
@@ -64,7 +74,6 @@ form {
 #datosIndustria {
   border-style: solid;
   border-color: black;
-  border-radius: 5%;
   display: flex;
   flex-flow: column;
   margin: 1%;
@@ -72,12 +81,11 @@ form {
 }
 
 #datosTambos {
-  display:none;
+  display: none;
   border-style: double;
   border-color: darkblue;
   background-color: lightgray;
-  margin: 2% 2%;
-  padding: 1%;
+  margin-top: 2%;
 }
 
 .texto {
@@ -108,6 +116,10 @@ li {
   display: inline-flex;
 }
 
+ul {
+  padding-inline-start: 0px;
+}
+
 footer {
   padding: 2%;
   background-color: darkgray;
@@ -116,6 +128,7 @@ footer {
 
 #factura {
   padding: 1%;
+  display: none;
 }
 
 #factura > * {
@@ -145,31 +158,28 @@ tr:nth-child(even) {
   background-color: white;
 }
 
-#cotizacionDolar{
+#cotizacionDolar {
   text-align: right;
   text-decoration: solid;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 840px) {
   button {
     font-size: 1rem;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 777px) {
   th {
     font-size: 0.8rem;
   }
-}
-
-@media (max-width: 515px) {
   #formularios {
     display: block;
   }
 }
 
-@media (max-width: 425px) {
-  h1{
+@media (max-width: 650px) {
+  h1 {
     font-size: 1rem;
   }
   button {
